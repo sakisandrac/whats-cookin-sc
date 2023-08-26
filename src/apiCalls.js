@@ -1,5 +1,5 @@
 const fetchAPI = (dataType) => {
-  return fetch(`whats-cookin-api-eight.vercel.app/api/v1/${dataType}`)
+  return fetch(`https://whats-cookin-api-eight.vercel.app/api/v1/${dataType}`)
     .then((response) => {
       return response.json();
     })
@@ -11,7 +11,7 @@ const errorHandling = (err) => {
 };
 
 const postAPI = (user) => {
-  fetch('whats-cookin-api-eight.vercel.app/api/v1/usersRecipes', {
+  fetch('https://whats-cookin-api-eight.vercel.app/api/v1/usersRecipes', {
     method: 'POST',
     body: JSON.stringify(user),
     headers: {
